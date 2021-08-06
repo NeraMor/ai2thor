@@ -1420,6 +1420,9 @@ public class ObjectMetadata {
     public bool isMoving;// true if this game object currently has a non-zero velocity
     public AxisAlignedBoundingBox axisAlignedBoundingBox;
     public ObjectOrientedBoundingBox objectOrientedBoundingBox;
+    
+      // [YJ]
+    public bool RigidbodyAsleep;
 
     public ObjectMetadata() { }
 }

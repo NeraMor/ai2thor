@@ -941,6 +941,8 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj {
     public void ApplyForce(ServerAction action) {
         Vector3 dir = new Vector3(action.x, action.y, action.z);
         Rigidbody myrb = gameObject.GetComponent<Rigidbody>();
+        
+        Debug.Log(action + " | Applying force to " + gameObject.name + " " + myrb.IsSleeping());
 
         if (myrb.IsSleeping()) {
             myrb.WakeUp();
@@ -2143,6 +2145,12 @@ public class SimObjPhysics : MonoBehaviour, SimpleSimObj {
         transform.position = transformSaver[0];
         transform.eulerAngles = transformSaver[1];
 
+    }
+    
+    
+    public Rigidbody GetRigidbody()
+    {
+      return myRigidbody;
     }
 
 

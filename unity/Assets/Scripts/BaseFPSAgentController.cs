@@ -1564,6 +1564,9 @@ namespace UnityStandardAssets.Characters.FirstPerson {
         }
 
         // generates object metatada based on sim object's properties
+        
+        
+        // [YJ] METADATA VISUALIZATION
         public virtual ObjectMetadata ObjectMetadataFromSimObjPhysics(SimObjPhysics simObj, bool isVisible) {
             ObjectMetadata objMeta = new ObjectMetadata();
             GameObject o = simObj.gameObject;
@@ -1666,6 +1669,9 @@ namespace UnityStandardAssets.Characters.FirstPerson {
             objMeta.objectOrientedBoundingBox = simObj.ObjectOrientedBoundingBox;
 
             objMeta.axisAlignedBoundingBox = simObj.AxisAlignedBoundingBox;
+            
+            
+            objMeta.RigidbodyAsleep = simObj.GetRigidbody().IsSleeping();
 
             return objMeta;
         }
@@ -3070,6 +3076,8 @@ namespace UnityStandardAssets.Characters.FirstPerson {
                 actionFinished(false);
                 return;
             }
+            
+            Debug.Log("Initial random spawn [YJ]");
 
             // something is in our hand AND we are trying to spawn it. Quick drop the object
             if (ItemInHand != null) {

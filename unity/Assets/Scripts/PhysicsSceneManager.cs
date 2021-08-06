@@ -454,6 +454,8 @@ public class PhysicsSceneManager : MonoBehaviour {
 
             return false;
         }
+        
+        Debug.Log("Place Objects in receptacles [YJ]");
 
         // initialize Unity's random with seed
         UnityEngine.Random.InitState(seed);

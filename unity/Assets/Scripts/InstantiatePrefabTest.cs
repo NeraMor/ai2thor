@@ -163,6 +163,8 @@ public class InstantiatePrefabTest : MonoBehaviour {
         if (rsps.Count == 0) {
             return false;
         }
+        
+        Debug.Log("Placing stuff for receptacle[YJ]");
 
         List<ReceptacleSpawnPoint> goodRsps = new List<ReceptacleSpawnPoint>();
 
@@ -262,6 +264,8 @@ public class InstantiatePrefabTest : MonoBehaviour {
 #endif
             return false;
         }
+        
+        Debug.Log("We be spawning object [YJ]");
 
         // remember the original rotation of the sim object if we need to reset it
         // Quaternion originalRot = sop.transform.rotation;
@@ -603,6 +607,7 @@ public class InstantiatePrefabTest : MonoBehaviour {
     public bool CheckSpawnArea(
         SimObjPhysics simObj, Vector3 position, Quaternion rotation, bool spawningInHand
     ) {
+        Debug.Log("Checking spawn area [YJ]");      
         return null == ColliderHitByObjectInSpawnArea(simObj, position, rotation, spawningInHand);
     }
 

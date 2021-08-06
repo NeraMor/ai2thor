@@ -1417,6 +1417,9 @@ namespace UnityStandardAssets.Characters.FirstPerson {
                 case "irs": {
                         Dictionary<string, object> action = new Dictionary<string, object>();
                         action["action"] = "InitialRandomSpawn";
+                        
+                        
+                        Debug.Log("Calling random spawn functions here[YJ]");
 
                         // List<string> excludedObjectIds = new List<string>();
                         // foreach (SimObjPhysics sop in AManager.agents[0].VisibleSimObjs(false)) {
@@ -3282,6 +3285,7 @@ namespace UnityStandardAssets.Characters.FirstPerson {
             // StartCoroutine(CheckIfactionCompleteWasSetToTrueAfterWaitingALittleBit(splitcommand[0]));
 
         }
+        
 #endif
 
 #if UNITY_EDITOR
